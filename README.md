@@ -54,7 +54,20 @@ PS C:\> Get-Command –Name *Firewall*
 ```
 ### CMDLETS
 
+```
+PS C:\> Get-ChildItem
 
+PS C:\> Get-ChildItem | Format-List *
+-> This returns all 'named' properties with its 'objects'
+-> The 'names' use to filter the output
+
+PS C:\> Get-Process | Sort-Object -Unique | Select-Object ProcessName
+PS C:\> Get-Process | Sort-Object -Unique | Select-Object ProcessName > uniq_procs.txt
+-> list of processes
+-> sorts the list with (-Unique) parameter
+-> selects the "ProcessName" objects
+-> returns a unique list of process names
+```
 
 
 
