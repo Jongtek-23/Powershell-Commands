@@ -135,7 +135,14 @@ PS C:\> ls -r C:\users\user\Documents -File *.txt | % {sls -Path $_ -Pattern pas
 -> 'sls' alias 'Select-String' for '-Path' in this case
 -> '$_' variable for current value in the pipeline
 -> '-Pattern' search for string 'pass'
+```
+- `Get-Service` : info about installed `services` and identify which is vulnerable
+```sql
+PS C:\> Get-Service
 
+PS C:\> Get-Service “s*” | Sort-Object Status -Descending
+-> services statinf with "s"
+-> descending order and sorted by 'status' property
 ```
 
 
